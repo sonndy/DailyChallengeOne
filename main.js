@@ -24,12 +24,48 @@ let cardObjectArray = [
         numberOfPics: '7K'
 
 
+    },
+    {
+        headerImage: './media/One/cardOne.png',
+        imgAlt: 'a vast desert',
+        bottomImages: [
+            './media/One/cardOne-one.png',
+            './media/One/cardOne-two.png',
+            './media/One/cardOne-three.png'
+            ],
+        cardType: 'People',
+        numberOfPics: '144'
+    },
+    {
+        headerImage: './media/Two/cardTwo.png',
+        imgAlt: 'a vast desert',
+        bottomImages: [
+            './media/Two/cardTwo-one.png',
+            './media/Two/cardTwo-two.png',
+            './media/Two/cardTwo-three.png'
+            ],
+        cardType: 'Nature',
+        numberOfPics: '7K'
+
+
     }
+
 ]
 
 
 
 const cardContainers = document.querySelector(".cards-container");
+const contentContainer = document.querySelector(".content-container");
+
+
+
+const ballContainer = document.createElement("div");
+ballContainer.className = "first-ball";
+
+
+contentContainer.append(ballContainer);
+
+
 
 
 const newCard = (cardObjectArray) => {
@@ -97,7 +133,9 @@ const newCard = (cardObjectArray) => {
         // appending card to the card container
 
         cardContainers.append(cardSection);
-        console.log(cardSection)
+
+        console.log(ballContainer);
+   
     })
 
    

@@ -4,10 +4,12 @@ body{
 }
 
 .content-container {
+    position: relative;
     background-color: #EFF0F1;
     margin-inline: 50px;
     margin-top: 100px;
     padding: 62px;
+    padding-top: 40px;
     border-radius: 26px;
 }
 
@@ -47,12 +49,15 @@ body{
 }
 
 .card {
+    position: relative;
+    z-index: 1;
     width: min(416px,437px);
     margin: 0;
     background-color: #FFFFFF;
     padding: 24px;
     border-radius: 32px;
-    height: 492px;
+    height: 472px;
+
     max-width: 437px;
 }
 
@@ -93,10 +98,20 @@ footer p:first-of-type{
     gap: 84px;
 }
 
+.first-ball {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -9%;
+    left: 55%;
+    z-index: -1;
+    border-radius: 50%;
+    
+    background: linear-gradient(0deg, #E5E7F0, #E5E7F0), linear-gradient(0deg, #E5E7F0, #E5E7F0), linear-gradient(0deg, #E5E7F0, #E5E7F0), linear-gradient(0deg, #E5E7F0, #E5E7F0), #E5E7F0;
+}
+
+
 @media screen and (max-width:705px){
-    body{
-        background-color: red;
-    }
 
     .card {
         /* width:min(316px,437px); */
